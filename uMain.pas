@@ -40,19 +40,19 @@ uses
 const
   eps = 10e-6;
 
-// функция
+// С„СѓРЅРєС†РёСЏ
 function Fx(x: Double): Double;
 begin
   Result := Exp(-2*x) - 2*x + 1;
 end;
 
-// производная ф-ии
+// РїСЂРѕРёР·РІРѕРґРЅР°СЏ РѕС‚ С„СѓРЅРєС†РёРё
 function Fxx(X: Real): Real;
 begin
   Result := -2*Exp(-2*x)-2;
 end;
 
-// https://ru.wikipedia.org/wiki/Метод_бисекции
+// https://ru.wikipedia.org/wiki/РњРµС‚РѕРґ_Р±РёСЃРµРєС†РёРё
 function HalfDiv(a, b: Double; var Count: Integer): Double;
 var
   c: Double;
@@ -86,7 +86,7 @@ begin
   Result := c;
 end;
 
-// http://cyclowiki.org/wiki/Метод_хорд
+// http://cyclowiki.org/wiki/РњРµС‚РѕРґ_С…РѕСЂРґ
 function Corde(a, b: Double; var Count: Integer): Double;
 var
   x: Double;
@@ -112,7 +112,7 @@ begin
   Result := a;
 end;
 
-// https://ru.wikipedia.org/wiki/Метод_Ньютона
+// https://ru.wikipedia.org/wiki/РњРµС‚РѕРґ_РќСЊСЋС‚РѕРЅР°
 function Newton(x0: Double; var Count: Integer): Double;
 var
   oldX, x: Double;
